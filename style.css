@@ -243,3 +243,136 @@ footer p:first-child {
         font-size: 27px;
     }
 }
+/* ========================================
+   PAGE CRÉER MON COMPTE
+   ======================================== */
+
+.page-inscription {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.inscription-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+}
+
+.logo-inscription {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    border-radius: 50%;
+    background: #8B5CF6;
+}
+
+.inscription-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #121212;
+}
+
+.texte-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+    line-height: 1.5;
+}
+
+#formInscription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#formInscription label {
+    font-weight: 600;
+    color: #333;
+    margin-top: 8px;
+}
+
+#formInscription input[type="text"],
+#formInscription input[type="email"],
+#formInscription input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#formInscription input:focus {
+    border-color: #8B5CF6;
+}
+
+.conditions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    font-weight: normal !important;
+}
+
+.conditions input {
+    width: 18px;
+    height: 18px;
+}
+
+.bouton-principal {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 14px;
+    background: #FF6B35;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bouton-principal:hover {
+    transform: translateY(-2px);
+}
+
+.connexion-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #666;
+}
+
+.connexion-link a {
+    color: #8B5CF6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Adaptation téléphone */
+@media (max-width: 600px) {
+
+    .page-inscription {
+        padding: 20px 15px;
+    }
+
+    .inscription-container {
+        padding: 25px 20px;
+    }
+
+    .inscription-container h1 {
+        font-size: 27px;
+    }
+}
