@@ -376,3 +376,191 @@ footer p:first-child {
         font-size: 27px;
     }
 }
+/* ========================================
+   PAGE CRÉER MON PROFIL
+   ======================================== */
+
+.page-profil {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at top left, #eee7ff 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #fff0e8 0%, transparent 35%),
+        #f7f9fc;
+}
+
+.profil-container {
+    width: 100%;
+    max-width: 550px;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 28px;
+    box-shadow: 0 15px 40px rgba(30, 30, 60, 0.12);
+}
+
+.logo-profil {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee7ff;
+    border-radius: 22px;
+    font-size: 38px;
+}
+
+.profil-container h1 {
+    text-align: center;
+    color: #121212;
+    margin-bottom: 8px;
+}
+
+.profil-intro {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+.profil-container h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 18px;
+    color: #121212;
+}
+
+
+/* ---------- AVATARS ---------- */
+
+.avatars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    min-height: 85px;
+    border: 3px solid transparent;
+    border-radius: 20px;
+    background: #f7f9fc;
+    font-size: 45px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.avatar:hover {
+    transform: translateY(-3px);
+    border-color: #8B5CF6;
+}
+
+.avatar-selectionne {
+    border-color: #8B5CF6;
+    background: #eee7ff;
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.18);
+}
+
+
+/* ---------- CHAMPS ---------- */
+
+.profil-container label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.profil-container input[type="text"],
+.profil-container select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    background: #ffffff;
+}
+
+.profil-container input[type="text"]:focus {
+    border-color: #8B5CF6;
+}
+
+.profil-container select:disabled {
+    color: #333333;
+    opacity: 1;
+}
+
+.information-classe {
+    margin-top: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* ---------- CODE EDUCI ---------- */
+
+.code-box {
+    margin: 25px 0;
+    padding: 20px;
+    text-align: center;
+    background: #f5f1ff;
+    border: 2px dashed #8B5CF6;
+    border-radius: 18px;
+}
+
+.code-box p {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #555;
+}
+
+.code-box strong {
+    display: block;
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: #8B5CF6;
+    margin-bottom: 8px;
+}
+
+.code-box small {
+    color: #777;
+}
+
+
+/* ---------- BOUTON ---------- */
+
+#terminerProfil {
+    width: 100%;
+}
+
+
+/* ---------- TÉLÉPHONE ---------- */
+
+@media (max-width: 600px) {
+
+    .page-profil {
+        padding: 20px 15px;
+    }
+
+    .profil-container {
+        padding: 25px 20px;
+    }
+
+    .avatars {
+        gap: 10px;
+    }
+
+    .avatar {
+        min-height: 75px;
+        font-size: 38px;
+    }
+
+    .profil-container h1 {
+        font-size: 28px;
+    }
+}
