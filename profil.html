@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Créer mon profil - EduCI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page-profil">
+
+        <div class="profil-container">
+
+            <div class="logo-profil">
+                📚
+            </div>
+
+            <h1>Créer mon profil 👤</h1>
+
+            <p class="profil-intro">
+                Personnalise ton profil EduCI 🇨🇮📚
+            </p>
+
+
+            <!-- AVATARS -->
+
+            <h2>Choisis ton avatar</h2>
+
+            <div class="avatars">
+
+                <button type="button" class="avatar" data-avatar="👩🏽‍🎓">
+                    👩🏽‍🎓
+                </button>
+
+                <button type="button" class="avatar" data-avatar="🧑🏽‍🎓">
+                    🧑🏽‍🎓
+                </button>
+
+                <button type="button" class="avatar" data-avatar="👩🏾‍💻">
+                    👩🏾‍💻
+                </button>
+
+                <button type="button" class="avatar" data-avatar="🧑🏾‍💻">
+                    🧑🏾‍💻
+                </button>
+
+                <button type="button" class="avatar" data-avatar="👩🏿‍🔬">
+                    👩🏿‍🔬
+                </button>
+
+                <button type="button" class="avatar" data-avatar="🧑🏿‍🔬">
+                    🧑🏿‍🔬
+                </button>
+
+            </div>
+
+
+            <!-- NOM D'AFFICHAGE -->
+
+            <label for="nomProfil">
+                Comment veux-tu être appelé(e) ?
+            </label>
+
+            <input
+                type="text"
+                id="nomProfil"
+                placeholder="Exemple : Marie"
+                maxlength="20"
+            >
+
+
+            <!-- CLASSE -->
+
+            <label for="classe">
+                Ta classe
+            </label>
+
+            <select id="classe" disabled>
+
+                <option value="3e">
+                    3e
+                </option>
+
+            </select>
+
+            <p class="information-classe">
+                🎓 EduCI commence actuellement avec la classe de 3e.
+            </p>
+
+
+            <!-- CODE EDUCI -->
+
+            <div class="code-box">
+
+                <p>Ton code EduCI</p>
+
+                <strong id="codeEduCI">
+                    Génération...
+                </strong>
+
+                <small>
+                    Ce code servira à identifier ton profil EduCI.
+                </small>
+
+            </div>
+
+
+            <!-- TERMINER -->
+
+            <button
+                type="button"
+                id="terminerProfil"
+                class="bouton-principal"
+            >
+                Terminer ✅
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        // Avatar sélectionné
+        const avatars = document.querySelectorAll(".avatar");
+
+        avatars.forEach(function (avatar) {
+
+            avatar.addEventListener("click", function () {
+
+                avatars.forEach(function (a) {
+                    a.classList.remove("avatar-selectionne");
+                });
+
+                avatar.classList.add("avatar-selectionne");
+
+            });
+
+        });
+
+
+        // Génération d'un code EduCI
+        function genererCode() {
+
+            const nombre =
+                Math.floor(1000 + Math.random() * 9000);
+
+            return "EC-" + nombre;
+
+        }
+
+        document.getElementById("codeEduCI").textContent =
+            genererCode();
+
+
+        // Bouton Terminer
+        document
+            .getElementById("terminerProfil")
+            .addEventListener("click", function () {
+
+                const nom =
+                    document.getElementById("nomProfil").value.trim();
+
+                if (nom === "") {
+
+                    alert("Entre ton nom d'affichage 😊");
+
+                    return;
+
+                }
+
+                alert(
+                    "Profil créé avec succès ! 🎉🇨🇮"
+                );
+
+            });
+
+    </script>
+
+</body>
+</html>
