@@ -879,3 +879,173 @@ footer p:first-child {
     }
 
 } 
+/* =========================================
+   PAGE MATHÉMATIQUES 3e
+========================================= */
+
+.cours-page {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.cours-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 35px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #164e8b, #2563eb);
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cours-icon {
+    font-size: 70px;
+}
+
+.cours-header h1 {
+    margin: 5px 0;
+    font-size: 36px;
+}
+
+.cours-header p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.lecons-title {
+    margin-bottom: 20px;
+}
+
+.lecons-title h2 {
+    color: #164e8b;
+    margin-bottom: 5px;
+}
+
+.lecons-title p {
+    color: #64748b;
+}
+
+.lecons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.lecon-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px;
+    background: white;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #172033;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.25s ease;
+}
+
+.lecon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.numero-lecon {
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee7ff;
+    color: #8B5CF6;
+    border-radius: 14px;
+    font-weight: 800;
+}
+
+.lecon-card h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.lecon-card p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.fleche {
+    margin-left: auto;
+    font-size: 25px;
+    color: #8B5CF6;
+}
+
+.revision-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 35px 0;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.revision-card > span {
+    font-size: 45px;
+}
+
+.revision-card h2 {
+    color: #164e8b;
+    margin: 0 0 5px;
+}
+
+.revision-card p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+/* TABLETTE */
+
+@media (max-width: 800px) {
+
+    .lecons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cours-header h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* TÉLÉPHONE */
+
+@media (max-width: 500px) {
+
+    .cours-page {
+        width: 92%;
+    }
+
+    .cours-header {
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .cours-icon {
+        font-size: 50px;
+    }
+
+    .cours-header h1 {
+        font-size: 25px;
+    }
+
+    .lecon-card {
+        padding: 18px;
+    }
+
+} 
