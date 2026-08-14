@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Calcul littéral - EduCI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="dashboard-navbar">
+
+        <a href="math-3e.html" class="dashboard-logo">
+            📚 EduCI 🇨🇮
+        </a>
+
+        <div class="profil-mini">
+            📐 3e
+        </div>
+
+    </header>
+
+
+    <main class="cours-page">
+
+        <!-- EN-TÊTE -->
+
+        <section class="cours-header">
+
+            <span class="cours-icon">📐</span>
+
+            <div>
+
+                <p>EduCI • Mathématiques • 3e 🇨🇮</p>
+
+                <h1>Calcul littéral</h1>
+
+                <p>
+                    Leçon 1 — Découvrir et utiliser
+                    les expressions littérales.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- COURS -->
+
+        <section class="revision-card">
+
+            <div>
+
+                <h2>📖 Le cours</h2>
+
+                <p>
+                    Une expression littérale est une expression
+                    mathématique qui contient des nombres et
+                    des lettres.
+                </p>
+
+                <p>
+                    La lettre représente un nombre que l'on ne
+                    connaît pas forcément.
+                </p>
+
+                <h3>💡 Exemples</h3>
+
+                <p>
+                    3x + 5 est une expression littérale.
+                </p>
+
+                <p>
+                    2(a + 4) est également une expression
+                    littérale.
+                </p>
+
+                <h3>🧠 À retenir</h3>
+
+                <p>
+                    Lorsqu'un nombre est multiplié par une lettre,
+                    on peut écrire par exemple 3 × x sous la forme
+                    <strong>3x</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXEMPLE -->
+
+        <section class="revision-card">
+
+            <div>
+
+                <h2>✏️ Exemple</h2>
+
+                <p>
+                    Si x = 4, calculons :
+                </p>
+
+                <p>
+                    <strong>3x + 5</strong>
+                </p>
+
+                <p>
+                    3 × 4 + 5 = 12 + 5 = 17
+                </p>
+
+                <p>
+                    Donc, lorsque x = 4, l'expression
+                    vaut <strong>17</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXERCICES -->
+
+        <section class="revision-card">
+
+            <div>
+
+                <h2>📝 Exercice</h2>
+
+                <p>
+                    Calcule l'expression suivante lorsque
+                    x = 5 :
+                </p>
+
+                <p>
+                    <strong>2x + 7</strong>
+                </p>
+
+                <button
+                    class="bouton-edu"
+                    onclick="afficherReponse()">
+                    Voir la correction
+                </button>
+
+                <p id="correction"
+                   style="display:none; margin-top:15px;">
+
+                    ✅ Correction :
+                    2 × 5 + 7 = 10 + 7 = 17.
+                    <br>
+                    <strong>Réponse : 17</strong>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ -->
+
+        <section class="revision-card">
+
+            <div>
+
+                <h2>🧠 Mini-quiz</h2>
+
+                <p>
+                    Quelle expression est littérale ?
+                </p>
+
+                <button
+                    class="bouton-edu"
+                    onclick="repondreQuiz('a')">
+                    A — 15 + 4
+                </button>
+
+                <br><br>
+
+                <button
+                    class="bouton-edu"
+                    onclick="repondreQuiz('b')">
+                    B — 3x + 2
+                </button>
+
+                <br><br>
+
+                <button
+                    class="bouton-edu"
+                    onclick="repondreQuiz('c')">
+                    C — 20 ÷ 5
+                </button>
+
+                <p id="resultatQuiz"
+                   style="margin-top:15px;">
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TERMINER -->
+
+        <section class="revision-card">
+
+            <div>
+
+                <h2>🎯 Leçon terminée ?</h2>
+
+                <p>
+                    Lorsque tu as terminé cette leçon,
+                    appuie sur le bouton ci-dessous.
+                </p>
+
+                <button
+                    class="bouton-edu"
+                    onclick="terminerLecon()">
+
+                    ✅ Terminer la leçon
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        function afficherReponse() {
+
+            document.getElementById("correction")
+                .style.display = "block";
+
+        }
+
+
+        function repondreQuiz(reponse) {
+
+            const resultat =
+                document.getElementById("resultatQuiz");
+
+            if (reponse === "b") {
+
+                resultat.innerHTML =
+                    "🎉 Bonne réponse ! 3x + 2 est une expression littérale.";
+
+            } else {
+
+                resultat.innerHTML =
+                    "❌ Pas tout à fait. Essaie encore !";
+
+            }
+
+        }
+
+
+        function terminerLecon() {
+
+            localStorage.setItem(
+                "maths3e_lecon1",
+                "terminee"
+            );
+
+            alert(
+                "🎉 Bravo ! La leçon 1 est terminée !"
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
