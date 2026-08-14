@@ -100,6 +100,25 @@
         </div>
 
     </main>
+<script>
+    const formulaire = document.getElementById("formInscription");
 
+    formulaire.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const motDePasse =
+            document.getElementById("motDePasse").value;
+
+        const confirmation =
+            document.getElementById("confirmation").value;
+
+        if (motDePasse !== confirmation) {
+            alert("Les deux mots de passe ne correspondent pas. 🔐");
+            return;
+        }
+
+        window.location.href = "profil.html";
+    });
+</script>
 </body>
 </html>
